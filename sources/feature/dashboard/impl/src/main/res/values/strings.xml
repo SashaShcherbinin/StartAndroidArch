@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard_close_button">Close</string>
+    <string name="dashboard_network_error">Please check your connection</string>
+</resources>

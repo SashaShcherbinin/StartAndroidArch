@@ -1,0 +1,118 @@
+[versions]
+java = "VERSION_17"
+android-targetSdk = "34"
+android-compileSdk = "34"
+android-minSdk = "23"
+android-gradle = "8.1.4"
+android-compose = "1.5.8"
+
+androidx-lifecycle = "2.8.4"
+androidx-test = "1.5.2"
+androidx-test-espresso = "3.5.1"
+coroutines = '1.8.1'
+google-analytics = "22.1.0"
+compose = "1.6.8"
+koin = "3.5.6"
+kotlin = "1.9.22"
+ktor = "2.3.6"
+room = "2.6.1"
+
+[libraries]
+android-gradle = { module = "com.android.tools.build:gradle", version.ref = "android-gradle" }
+
+androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.13.1" }
+androidx-datastore = { module = "androidx.datastore:datastore", version = "1.1.1" }
+androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version = "2.9.1" }
+
+google-firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "google-analytics" }
+google-firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics", version = "19.0.3" }
+google-firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx", version = "19.0.3" }
+google-material = { module = "com.google.android.material:material", version = "1.12.0" }
+
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+
+compose-navigation = { module = "androidx.navigation:navigation-compose", version = "2.8.0" }
+compose-material = { module = "androidx.compose.material3:material3", version = "1.3.0" }
+compose-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version = "0.32.0" }
+
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-xml-builder = { module = "org.redundent:kotlin-xml-builder", version = "1.9.1" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.5.0" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.6.2" }
+
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktor-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+room-ktx = { module = "androidx.room:room-ktx", version.ref="room"}
+room-compiler = { module = "androidx.room:room-compiler", version.ref="room"}
+
+image-coil = { module = "io.coil-kt:coil-compose", version = "2.6.0"}
+
+assertJ-core = { module = "org.assertj:assertj-core", version = "3.24.2" }
+junit5-api = { module = "org.junit.jupiter:junit-jupiter-api", version = "5.10.1" }
+mockito-core = { module = "org.mockito:mockito-core", version = "5.10.0" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version = "5.2.1" }
+
+[plugins]
+common-android-application-module = { id = "android-application-module" }
+common-android-library-module = { id = "android-library-module" }
+common-kotlin-library-module = { id = "kotlin-library-module" }
+
+google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version = "2.9.9" }
+google-firebase-performance = { id = "com.google.firebase.firebase-perf", version = "1.4.2" }
+google-devtools-ksp = { id = "com.google.devtools.ksp", version = "1.9.21-1.0.15" }
+
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-parcelize = { id = "kotlin-parcelize" }
+
+[bundles]
+coroutines-android = [
+    "coroutines-core",
+    "coroutines-android"
+]
+
+koin-android = [
+    "koin-core",
+    "koin-android"
+]
+
+test-common = [
+    "assertJ-core",
+    "coroutines-test",
+    "junit5-api",
+    "kotlin-test",
+    "mockito-core",
+    "mockito-kotlin"
+]
+
+network = [
+    "ktor-client-core",
+    "ktor-client-android",
+    "ktor-content-negotiation",
+    "ktor-logging",
+    "ktor-serialization-json"
+]
+
+compose = [
+    "compose-navigation",
+    "compose-material",
+    "compose-preview",
+    "koin-compose"
+]

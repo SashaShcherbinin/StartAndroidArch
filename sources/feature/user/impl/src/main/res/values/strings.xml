@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_close_button">Go back</string>
+    <string name="dashboard_user_dashboard">Dashboard</string>
+</resources>
